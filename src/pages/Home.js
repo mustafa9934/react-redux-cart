@@ -8,12 +8,11 @@ const Home = () => {
             .then(res=>res.json())
             .then(json=>setProducts(json))
     }, [])
-    console.log(products);
   return (
     <div className='container mx-auto px-6 py-10'>
       <div className='grid grid-cols-1 large:grid-cols-4 medium:grid-cols-2 small:grid-cols-1 gap-4'>
         {products && products.map(product => {
-            return <div className='w-100 bg-gray-200'>
+            return <div className='w-100 bg-gray-200' key={product.id}>
             <div className='w-100 h-48 bg-gray-300 flex justify-center'>
                 <img className='h-48 w-100' src={product.image} alt={product.title}/>
             </div>
