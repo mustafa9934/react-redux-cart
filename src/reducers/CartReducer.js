@@ -11,7 +11,7 @@ export const CartSlice = (state= initialState, action) => {
       const product = action.payload;
       const checkProduct = state.items.find(item => item.id === product.id)
      if (checkProduct) {
-        checkProduct.price += action.payload.price;
+        checkProduct.totalPrice += product.price;
         checkProduct.quantity ++;
         state.totalQuantity ++;
      } else {
