@@ -1,1 +1,3 @@
 export const ADD_TOCART = "ADD_TOCART";
+export const DECREASE_ITEM = "DECREASE_ITEM";
+export const INCREASE_ITEM = "INCREASE_ITEM";
